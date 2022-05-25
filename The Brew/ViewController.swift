@@ -43,27 +43,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     //MARK: - Actions
     @objc func fetchItems() {
+        self.items.removeAll()
         let query = CKQuery(recordType: "BrewItem", predicate: NSPredicate(value: true))
         database.perform(query, inZoneWith: nil) { [weak self] drinks, error in
             guard let drinks = drinks, error == nil else {
                 return
             }
+            print(drinks)
             DispatchQueue.main.async {
                 
                 for drink in drinks {
                     
                     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
                     let newBrewItem = BrewItem(context: context)
+                    let imageURL = drink["image"] as? CKAsset
                     
                     newBrewItem.name = drink.value(forKey: "name") as? String ?? ""
-                    newBrewItem.imageData = drink.value(forKey: "imageData") as? Data
+                    newBrewItem.imageURL = imageURL?.fileURL
                     newBrewItem.type = "coldDrinks"
                     newBrewItem.steps = drink.value(forKey: "steps") as! [String] as NSObject
                     (UIApplication.shared.delegate as! AppDelegate).saveContext()
 
                     
                     self?.items.append(Brew(name: drink.value(forKey: "name") as? String ?? "",
-                                            imageData: drink.value(forKey: "imageData") as? NSData,
+                                            imageURL: imageURL?.fileURL,
                                             type: .coldDrinks,
                                             steps: drink.value(forKey: "steps") as! [String]))
                 }
@@ -134,7 +137,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].name
+        let drink = items[indexPath.row]
+        
+        cell.textLabel?.text = drink.name
+        if let url = drink.imageURL, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
+            cell.imageView?.image = image
+        }
         return cell
     }
 

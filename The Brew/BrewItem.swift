@@ -9,7 +9,7 @@ import Foundation
 
 struct Brew {
     var name: String
-    var imageData: NSData?
+    var imageURL: URL?
     var type: DrinkType?
     var steps: [String]
 }
