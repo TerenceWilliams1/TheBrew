@@ -16,6 +16,10 @@
 		3C6B7FC1283D7686003B5032 /* The_BrewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B7FC0283D7686003B5032 /* The_BrewTests.swift */; };
 		3C6B7FCB283D7686003B5032 /* The_BrewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B7FCA283D7686003B5032 /* The_BrewUITests.swift */; };
 		3C6B7FCD283D7687003B5032 /* The_BrewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6B7FCC283D7687003B5032 /* The_BrewUITestsLaunchTests.swift */; };
+		3C6B7FDC283D775F003B5032 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6B7FDB283D775F003B5032 /* CloudKit.framework */; };
+		3C90A25F283D8F0C00AAC7EA /* BrewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A25E283D8F0C00AAC7EA /* BrewItem.swift */; };
+		3C90A262283D94D900AAC7EA /* BrewDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C90A260283D94D900AAC7EA /* BrewDataModel.xcdatamodeld */; };
+		3C90A264283DD7DE00AAC7EA /* me.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3C90A263283DD7DE00AAC7EA /* me.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,11 @@
 		3C6B7FC6283D7686003B5032 /* The BrewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The BrewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6B7FCA283D7686003B5032 /* The_BrewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_BrewUITests.swift; sourceTree = "<group>"; };
 		3C6B7FCC283D7687003B5032 /* The_BrewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_BrewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C6B7FD9283D7742003B5032 /* The Brew.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "The Brew.entitlements"; sourceTree = "<group>"; };
+		3C6B7FDB283D775F003B5032 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3C90A25E283D8F0C00AAC7EA /* BrewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewItem.swift; sourceTree = "<group>"; };
+		3C90A261283D94D900AAC7EA /* BrewDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrewDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3C90A263283DD7DE00AAC7EA /* me.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6B7FDC283D775F003B5032 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +89,12 @@
 		3C6B7F9D283D7685003B5032 = {
 			isa = PBXGroup;
 			children = (
+				3C90A260283D94D900AAC7EA /* BrewDataModel.xcdatamodeld */,
 				3C6B7FA8283D7685003B5032 /* The Brew */,
 				3C6B7FBF283D7686003B5032 /* The BrewTests */,
 				3C6B7FC9283D7686003B5032 /* The BrewUITests */,
 				3C6B7FA7283D7685003B5032 /* Products */,
+				3C6B7FDA283D775F003B5032 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +111,16 @@
 		3C6B7FA8283D7685003B5032 /* The Brew */ = {
 			isa = PBXGroup;
 			children = (
+				3C6B7FD9283D7742003B5032 /* The Brew.entitlements */,
 				3C6B7FA9283D7685003B5032 /* AppDelegate.swift */,
 				3C6B7FAB283D7685003B5032 /* SceneDelegate.swift */,
 				3C6B7FAD283D7685003B5032 /* ViewController.swift */,
+				3C90A25E283D8F0C00AAC7EA /* BrewItem.swift */,
 				3C6B7FAF283D7685003B5032 /* Main.storyboard */,
 				3C6B7FB2283D7686003B5032 /* Assets.xcassets */,
 				3C6B7FB4283D7686003B5032 /* LaunchScreen.storyboard */,
 				3C6B7FB7283D7686003B5032 /* Info.plist */,
+				3C90A263283DD7DE00AAC7EA /* me.JPG */,
 			);
 			path = "The Brew";
 			sourceTree = "<group>";
@@ -125,6 +140,14 @@
 				3C6B7FCC283D7687003B5032 /* The_BrewUITestsLaunchTests.swift */,
 			);
 			path = "The BrewUITests";
+			sourceTree = "<group>";
+		};
+		3C6B7FDA283D775F003B5032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C6B7FDB283D775F003B5032 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +257,7 @@
 				3C6B7FB6283D7686003B5032 /* LaunchScreen.storyboard in Resources */,
 				3C6B7FB3283D7686003B5032 /* Assets.xcassets in Resources */,
 				3C6B7FB1283D7685003B5032 /* Main.storyboard in Resources */,
+				3C90A264283DD7DE00AAC7EA /* me.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C90A25F283D8F0C00AAC7EA /* BrewItem.swift in Sources */,
 				3C6B7FAE283D7685003B5032 /* ViewController.swift in Sources */,
 				3C6B7FAA283D7685003B5032 /* AppDelegate.swift in Sources */,
 				3C6B7FAC283D7685003B5032 /* SceneDelegate.swift in Sources */,
+				3C90A262283D94D900AAC7EA /* BrewDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "The Brew/The Brew.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
@@ -447,6 +474,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "The Brew/The Brew.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
@@ -475,6 +504,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,7 +552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FVSZK45BZJ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C90A260283D94D900AAC7EA /* BrewDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C90A261283D94D900AAC7EA /* BrewDataModel.xcdatamodel */,
+			);
+			currentVersion = 3C90A261283D94D900AAC7EA /* BrewDataModel.xcdatamodel */;
+			path = BrewDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3C6B7F9E283D7685003B5032 /* Project object */;
 }
