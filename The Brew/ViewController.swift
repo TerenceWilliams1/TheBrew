@@ -81,7 +81,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return
             }
             DispatchQueue.main.async {
-//                self?.items = records.compactMap({$0.value(forKey: "name") as? String})
                 self?.table.reloadData()
                 self?.control.endRefreshing()
                 print(self?.items as Any)
